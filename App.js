@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 import LoginScreen from "./src/screens/login.js";
+import SignupScreen from './src/screens/signup_screen.js';
 
 
 const App: () => React$Node = () => {
@@ -21,7 +22,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="default" />
       <SafeAreaView style={styles.container}>
-         <LoginScreen />
+        <SignupScreen />
       </SafeAreaView>
     </>
   );
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#5896DD",
-},
+  },
 });
 
 export default App;

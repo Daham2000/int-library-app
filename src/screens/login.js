@@ -10,6 +10,7 @@ export default class LoginScreen extends Component {
                     <Image style={styles.logoImage} source={require("../images/image1.png")}></Image>
                     <Text style={styles.text}>User Login</Text>
                 </View>
+
                 <View style={styles.formController}>
                     <LoginForm />
                 </View>
@@ -21,11 +22,12 @@ export default class LoginScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent:'center',
+        flexDirection: 'column',
         backgroundColor: "#5896DD",
     },
     logoStyle: {
         alignItems: 'center',
-        flexGrow: 1,
         justifyContent : 'center',
     },
     logoImage: {
