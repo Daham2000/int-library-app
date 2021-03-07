@@ -1,0 +1,50 @@
+import React, { Component } from 'react';
+import { StyleSheet, View, TextInput, TouchableOpacity, Text, KeyboardAvoidingView } from "react-native";
+
+export default class LoginForm extends Component {
+  render() {
+    return (
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
+        <TextInput
+          placeholder="User name or Email"
+          placeholderTextColor='rgba(250,250,250,0.7)'
+          returnKeyType="next"
+          onSubmitEditing={()=> this.passwordInput.focus()}
+          keyboardType="email-address"
+          style={styles.input} />
+        <TextInput
+          placeholder="Password"
+          placeholderTextColor='rgba(250,250,250,0.7)'
+          returnKeyType="go"
+          secureTextEntry
+          ref={(input) => this.passwordInput=input}
+          style={styles.input} />
+        <TouchableOpacity style={styles.btnContainer}> 
+            <Text style={styles.btn}>LOGIN</Text>
+        </TouchableOpacity>
+      </KeyboardAvoidingView>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
+  input: {
+    height: 60,
+    backgroundColor: 'rgba(250,250,250,0.2)',
+    marginBottom: 20,
+    color: '#FFF',
+    paddingHorizontal: 10,
+  },
+  btnContainer: {
+    backgroundColor: '#298069',
+    paddingVertical: 10,
+  },
+  btn: {
+    textAlign: 'center',
+    fontWeight: '600',
+    color: '#FFFFFF'
+  }
+});
